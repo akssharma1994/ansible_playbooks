@@ -1,5 +1,12 @@
 ---
-  - name: 
-    hosts:
-    tasks: 
-    
+- name: "installing and configure java and tomcat"
+  hosts: all
+  become: yes
+  gather_facts: false
+  tasks:
+  - name: "Installing java"
+    yum:
+    name: java-1.8.0-openjdk
+    state: present      
+
+
