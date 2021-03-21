@@ -11,9 +11,9 @@
   debug: req_tomcat
   - name: "Installing java"
     yum:
-      name: {{ req_java }}
+      name: "{{ req_java }}""
       state: absent     
   - name: "downloading tomcat"
     get_url: 
-      name: {{ req_tomcat }}
+      name: "{{ req_tomcat }}"
       dest: /usr/local/
