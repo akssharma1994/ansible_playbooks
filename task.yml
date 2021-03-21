@@ -9,11 +9,6 @@
     req_tomcat: "https://mirrors.estointernet.in/apache/tomcat/tomcat-{{ req_ver.split[0] }}/v{{ req_ver }}/bin/apache-tomcat-{{ req_ver }}.zip"
   tasks:
   debug: "{{ req_tomcat }}"
-  - name: "Installing java"
-    yum:
-      name: "{{ req_java }}"
-      state: present     
   - name: "downloading tomcat"
-    get_url: 
       name: "{{ req_tomcat }}"
       dest: /usr/local/
