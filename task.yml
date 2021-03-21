@@ -10,7 +10,7 @@
   - name: "debugging"
     debug: "{{ req_tomcat }}"
   - name: " downloading tomcat "  
-  get_url:
-    url: "{{ req_tomcat }}"
-    dest: /usr/local/
-    mode: 0777
+    get_url:
+      url: "{{ req_tomcat }}"
+      dest: /usr/local/
+      mode: 0777
