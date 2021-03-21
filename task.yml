@@ -28,13 +28,13 @@
   - name: Copy file with owner and permissions
     copy:
       src: "/usr/local/apache-tomcat-{{ req_ver }}.tar.gz"
-      dest: "/usr/local/tomcat-{{ req_ver.split('.')[0] }}"
+      dest: "/usr/local/tomcat{{ req_ver.split('.')[0] }}.tar.gz"
       remote_src: yes
       owner: root
       group: root
       mode: '0777'
   - name: "unarchive downloaded zip"
     unarchive:
-      src: "/usr/local/tomcat-{{ req_ver.split('.')[0] }}"
-      dest: /usr/local/
+      src: "/usr/local/tomcat{{ req_ver.split('.')[0] }}.tar.gz"
+      dest: "/usr/local/"
       remote_src: True
