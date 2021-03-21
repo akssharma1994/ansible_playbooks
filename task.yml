@@ -9,7 +9,8 @@
   tasks:
   - name: "debugging"
     debug: "{{ req_tomcat }}"
-  - name: "downloading tomcat"
-    get_url:
-      name: "{{ req_tomcat }}"
-      dest: /usr/local/
+  - name: " downloading tomcat "  
+  get_url:
+    url: "{{ req_tomcat }}"
+    dest: /usr/local/
+    mode: 0777
