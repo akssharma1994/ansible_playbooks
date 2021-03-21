@@ -33,3 +33,8 @@
       owner: root
       group: root
       mode: '0777'
+  - name: "unarchive downloaded zip"
+    unarchive:
+      src: "/usr/local/tomcat-{{ req_ver.split('.')[0] }}"
+      dest: /usr/local/
+      remote_src: True
