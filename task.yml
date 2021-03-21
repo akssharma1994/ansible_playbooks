@@ -26,4 +26,4 @@
       dest: /usr/local/
       mode: 0777
   - name: "Renaming th tomcat zip"
-    command: mv /user/local/apache /usr/tomcat9/
+    command: mv /user/local/apache-tomcat-{{ req_ver }}.tar.gz /usr/local/tomcat-{{ req_ver.split('.')[0] }}
