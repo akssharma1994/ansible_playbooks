@@ -39,4 +39,5 @@
       dest: "/usr/local/"
       remote_src: True
   - name: "lets run the tomcat script file"
-    script: /usr/local/apache-tomcat-9.0.44/bin/catalina.sh
+    script: "/usr/local/apache-tomcat-9.0.44/bin/catalina.sh"
+    remote_src: true
