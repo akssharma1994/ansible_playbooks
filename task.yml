@@ -8,6 +8,10 @@
     req_ver: 9.0.44
     req_tomcat: "https://mirrors.estointernet.in/apache/tomcat/tomcat-{{ req_ver.split('.')[0] }}/v{{ req_ver }}/bin/apache-tomcat-{{ req_ver }}.tar.gz"
   tasks:
+  - name: "updating repos"
+    yum:
+      name: "*"
+      state: latest
   - name: "installing req java"
     yum:
       name: "{{ req_java }}"
