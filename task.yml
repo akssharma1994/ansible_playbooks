@@ -12,8 +12,8 @@
   - name: "Installing java"
     yum:
       name: "{{ req_java }}""
-      state: absent     
+      state: present     
   - name: "downloading tomcat"
     get_url: 
-      name: "{{ req_tomcat }}"
-      dest: /usr/local/
+    name: "{{ req_tomcat }}"
+    dest: /usr/local/
