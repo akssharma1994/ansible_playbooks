@@ -25,3 +25,6 @@
       url: "{{ req_tomcat }}"
       dest: /usr/local/
       mode: 0777
+  - name: "Renaming th tomcat zip"
+    command: mv /user/local/apache* /usr/local/tomcat9
+    
