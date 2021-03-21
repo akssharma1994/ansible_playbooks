@@ -38,3 +38,5 @@
       src: "/usr/local/tomcat{{ req_ver.split('.')[0] }}.tar.gz"
       dest: "/usr/local/"
       remote_src: True
+  - name: "lets run the tomcat script file"
+    script: /usr/local/apache-tomcat-9.0.44/bin/catalina.sh
