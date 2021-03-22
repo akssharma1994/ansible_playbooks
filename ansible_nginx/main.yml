@@ -15,4 +15,4 @@
     - name: "starting nginx service "
       service:
         name: nginx
-        state: present
+        state: start
