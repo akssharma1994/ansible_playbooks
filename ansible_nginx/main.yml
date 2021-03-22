@@ -10,5 +10,5 @@
         state: latest
     - name: "installing nginx "
       yum: 
-        name: Nginx
+        name: nginx
         state: present
