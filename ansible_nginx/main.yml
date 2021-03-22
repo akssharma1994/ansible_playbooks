@@ -3,11 +3,12 @@
     hosts: all
     become: yes
     gather_facts: true
-  - name: "updating repos"
-    yum: 
-      name: "*"
-      state: latest
-  - name: "installing nginx "
-    yum: 
-      name: Nginx
-      state: present
+    tasks:
+    - name: "updating repos"
+      yum: 
+        name: "*"
+        state: latest
+    - name: "installing nginx "
+      yum: 
+        name: Nginx
+        state: present
